@@ -1,5 +1,4 @@
 
-import HodlDashboard from './earning.jsx';
 import { useState, useEffect } from 'react';
 import Tokenomics from './tokenomics.jsx';
 
@@ -216,42 +215,57 @@ export default function OursTokenApp() {
      
         {/* Market Stats Cards */}
         <div className="w-full max-w-md mb-6" id="reflections">
-          {/* First Card - Market Cap */}
+          {/* First Card - Rounded */}
+        <div className="bg-black rounded-2xl p-4 mb-4 relative overflow-hidden">
+          {/* Chart Icon and Graph Line */}
+          <div className="flex justify-between items-start mb-12 relative z-10">
+          <div className="flex justify-between items-center mb-4 relative z-10 overflow-hidden rounded-2xl bg-black p-4">
+          <div className="mb-4 relative z-10 overflow-hidden rounded-2xl bg-black p-4">
+            <div className="w-full rounded-2xl overflow-hidden">
+              <img src="marketcap.jpg" alt="" className="w-full h-full object-cover rounded-2xl" />
+            </div>
+            <div className="text-white text-lg font-semibold mt-4 text-center">
+              $10,000,000
+            </div>
+          </div>
+
+        </div>
+
+          </div>
+        </div>
+
+          
+          <div className="bg-black rounded-2xl p-4 mb-4 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full z-0">
+              {/* If you want a background image here, place it like the first card */}
+            </div>
+            <div className="flex justify-between mb-4 relative z-10 overflow-hidden rounded-2xl">
+              <img src="holders.png" alt="" className="w-full h-full object-cover rounded-2xl" />
+            </div>
+          </div>
+
+
+          {/* Third Card */}
           <div className="bg-black rounded-xl p-4 mb-4 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-full "><img src="marketcap.jpg" alt="" /></div>
-            
-            {/* Chart Icon and Graph Line */}
-            <div className="flex justify-between items-start mb-12">
-              <div className="flex items-center rounded-full p-2">
-                <img src="marketcap.png" alt="" />
-              </div>
+            <div className="absolute top-0 left-0 w-full h-full z-0">
+              {/* Add bg image if needed */}
             </div>
-          </div>
-          
-          {/* Second Card */}
-          <div className="bg-black rounded-xl p-4 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-full "></div>
-            <div className="flex justify-between mb-4">
-              <img src="holders.png" alt="" />
-            </div>
-          </div>
-          
-          {/* third Card */}
-          <div className="bg-black rounded-xl p-4 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-full "></div>
-            <div className="flex justify-between mb-4">
+            <div className="flex justify-between mb-4 relative z-10">
               <img src="liquidity.png" alt="" />
             </div>
           </div>
-          
+
           {/* Fourth Card */}
           <div className="bg-black rounded-xl p-4 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-full "></div>
-            <div className="flex justify-between mb-4">
+            <div className="absolute top-0 left-0 w-full h-full z-0">
+              {/* Add bg image if needed */}
+            </div>
+            <div className="flex justify-between mb-4 relative z-10">
               <img src="perfeection.png" alt="" />
             </div>
           </div>
         </div>
+
 
         {/* What is $OURS? Section */}
         <div className="w-full max-w-md mb-8 pt-[8rem]" id="community">
@@ -300,9 +314,9 @@ export default function OursTokenApp() {
           <div id="tokenomics"><Tokenomics /></div>
           
           {/* Roadmap Section */}
-          <div id="roadmap" className=" max-w-md my-16 rounded-xl ">
+          {/* <div id="roadmap" className=" max-w-md my-16 rounded-xl ">
             <HodlDashboard />
-          </div>
+          </div> */}
        
           {/* Add this before the closing </main> tag */}
           <div className="w-full max-w-md mb-8">
@@ -312,13 +326,19 @@ export default function OursTokenApp() {
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold mb-6">The Future is $OURS</h2>
               
-              <button className="bg-yellow-500 text-black font-bold py-3 px-8 rounded-lg mb-16 w-full max-w-xs flex items-center justify-center">
-                <div className="h-5 w-5 rounded-full mr-2"><img src="buycoins.png" alt="" /></div>
-                Buy $OURS
-              </button>
-              
+              <div className="flex justify-center mb-16">
+                <button className="bg-yellow-500 text-black font-bold py-3 px-8 rounded-lg w-full max-w-md flex items-center justify-center">
+                  <div className="h-5 w-5 rounded-full mr-2">
+                    <img src="buycoins.png" alt="" />
+                  </div>
+                  Buy $OURS
+                </button>
+              </div>
+
               <h3 className="text-xl mb-8">Become one of $OURS</h3>
             </div>
+
+
             
             {/* Social media icons in a box with grid layout */}
             <div className="bg-black bg-opacity-80 border border-yellow-500/20 rounded-lg p-6 relative overflow-hidden">

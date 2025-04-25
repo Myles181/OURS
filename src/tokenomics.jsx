@@ -23,7 +23,7 @@ export default function Tokenomics() {
       </div>
       
       <div className="relative w-full max-w-md h-64 my-8">
-        <img src="tokenomics.png" alt="" />
+        <img src="tokenomics.jpeg" alt="" />
       </div>
       
       <div className="text-center mt-4 mb-12">

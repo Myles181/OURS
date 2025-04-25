@@ -189,7 +189,7 @@ export default function OursTokenApp() {
             {/* Chart Icon and Graph Line */}
             <div className="flex justify-between items-start mb-12">
               <div className="flex items-center rounded-full p-2">
-                <img src="marketcap.png" alt="" />
+                <img src="marketcap.jpeg" alt="" />
               </div>
              
             </div>
@@ -200,7 +200,7 @@ export default function OursTokenApp() {
           <div className="bg-black rounded-xl p-4 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full "></div>
             <div className="flex justify-between mb-4">
-              <img src="holders.png" alt="" />
+              <img src="marketcap.jpg" alt="" />
             </div>
             
           </div>
