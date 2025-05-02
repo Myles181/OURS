@@ -6,7 +6,7 @@ export default function OursTokenApp() {
   
   // State for partners that will scroll horizontally
   const [partners, setPartners,] = useState([
-    { id: 1, name: 'Binmart', color: '#3498db' },
+    { id: 1, name: 'Dexview', color: '#3498db' },
     { id: 2, name: 'Coinpecko', color: '#2ecc71' },
     { id: 3, name: 'Exchange', color: '#e74c3c' },
     { id: 4, name: 'Partner4', color: '#9b59b6' },
@@ -182,9 +182,9 @@ export default function OursTokenApp() {
         </div>
         <div className="flex items-center rounded-full px-5 py-3 bg-white shadow">
           <div className="h-8 w-8 rounded-full overflow-hidden mr-3">
-            <img src="bit.jpg" alt="Binmart Logo" className="h-full w-full object-cover" />
+            <img src="bit.jpg" alt="Dexview Logo" className="h-full w-full object-cover" />
           </div>
-          <span className="text-base font-semibold text-gray-900">Binmart</span>
+          <span className="text-base font-semibold text-gray-900">Dexview</span>
         </div>
 
 

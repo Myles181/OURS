@@ -5,7 +5,7 @@ export default function OursTokenApp() {
   
   // State for partners that will scroll horizontally
   const [partners, setPartners] = useState([
-    { id: 1, name: 'Binmart', color: '#3498db' },
+    { id: 1, name: 'Dexview', color: '#3498db' },
     { id: 2, name: 'Coinpecko', color: '#2ecc71' },
     { id: 3, name: 'Exchange', color: '#e74c3c' },
     { id: 4, name: 'Partner4', color: '#9b59b6' },

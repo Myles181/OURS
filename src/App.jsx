@@ -194,10 +194,10 @@ export default function OursTokenApp() {
           </div>
           <div className="flex items-center rounded-full px-3 py-1">
             <div className="h-6 w-6 rounded-full mr-2">
-              <img src="bit.jpg" alt="Binmart" />
+              <img src="bit.jpg" alt="Dexview" />
             </div>
             <a href="https://www.dexview.com/" target="_blank" rel="noopener noreferrer">
-              <span className="text-sm">Binmart</span>
+              <span className="text-sm">Dexview</span>
             </a>
           </div>
           <div className="flex items-center rounded-full px-3 py-1">
