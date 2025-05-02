@@ -13,6 +13,15 @@ export default function OursTokenApp() {
     { id: 5, name: 'Partner5', color: '#f1c40f' },
   ]);
 
+  const carouselItems = [
+    { id: 1, name: 'Coingecko', image: 'coingecko.jpeg' },
+    { id: 2, name: 'Pinksale', image: 'pinksale.webp' },
+    { id: 3, name: 'Bit', image: 'bit.jpeg' },
+    { id: 4, name: 'Coingecko', image: 'coingecko.jpeg' }, // Duplicate for seamless scroll
+    { id: 5, name: 'Pinksale', image: 'pinksale.webp' },
+    { id: 6, name: 'Bit', image: 'bit.jpeg' },
+  ];
+
  const navItems = [
   { name: 'Home', href: '#home' },
   { name: 'Tokenomics', href: '#tokenomics' },
@@ -171,10 +180,14 @@ export default function OursTokenApp() {
           </a>
 
         </div>
-        <div className="flex items-center rounded-full px-3 py-1">
-          <div className="h-6 w-6 rounded-full mr-2"><img src="bit.png" alt="" /></div>
-          <span className="text-sm">Binmart</span>
+        <div className="flex items-center rounded-full px-5 py-3 bg-white shadow">
+          <div className="h-8 w-8 rounded-full overflow-hidden mr-3">
+            <img src="bit.jpg" alt="Binmart Logo" className="h-full w-full object-cover" />
+          </div>
+          <span className="text-base font-semibold text-gray-900">Binmart</span>
         </div>
+
+
         <div className="flex items-center  rounded-full px-3 py-1">
           <div className="h-6 w-6 rounded-full  mr-2"><img src="coingecko.png" alt="" /></div>
           <span className="text-sm">Coinpecko</span>
@@ -220,10 +233,24 @@ export default function OursTokenApp() {
             <div className="absolute top-0 left-0 w-full h-full "></div>
             <div className="flex justify-between mb-4">
               <img src="perfeection.png" alt="" />
-            </div>
-            
+            </div>  
           </div>
         </div>
+
+        {/* Carousel Section */}
+        <div className="mt-6 w-full overflow-hidden">
+          <div className="flex animate-slide">
+            {carouselItems.map((item) => (
+              <div
+                key={item.id}
+                className="min-w-[150px] h-[100px] bg-white rounded-lg shadow-md flex items-center justify-center mx-2"
+              >
+                <img src={item.image} alt={item.name} className="h-full object-contain" />
+              </div>
+            ))}
+          </div>
+        </div>
+
 
         {/* What is $OURS? Section */}
         <div className="w-full max-w-md mb-8 pt-[8rem]">
@@ -376,122 +403,29 @@ export default function OursTokenApp() {
       </main>
 
       <style jsx>{`
-        @keyframes spin {
-          from {
-            transform: rotate(0deg);
+        @keyframes slide {
+          0% {
+            transform: translateX(0);
           }
-          to {
-            transform: rotate(360deg);
+          100% {
+            transform: translateX(-50%); /* Move half the total width for seamless loop */
           }
         }
-        
-        .animate-spin-slow {
-          animation: spin 10s linear infinite;
+
+        .animate-slide {
+          display: flex;
+          animation: slide 12s linear infinite;
+          width: ${carouselItems.length * 150}px; /* Total width of all items */
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
         }
       `}</style>
     </div>
   );
 }
-
-
-
-
-// import { useState, useEffect } from 'react';
-// import Tokenomics from './tokenomics.jsx'; 
-
-// export default function OursTokenApp() {
-//   const [isNavOpen, setIsNavOpen] = useState(false);
-//   const [activeNav, setActiveNav] = useState('Home');
-  
-//   // State for partners that will scroll horizontally
-//   const [partners, setPartners] = useState([
-//     { id: 1, name: 'Binmart', color: '#3498db' },
-//     { id: 2, name: 'Coinpecko', color: '#2ecc71' },
-//     { id: 3, name: 'Exchange', color: '#e74c3c' },
-//     { id: 4, name: 'Partner4', color: '#9b59b6' },
-//     { id: 5, name: 'Partner5', color: '#f1c40f' },
-//   ]);
-
-//   // Navigation items
-//   const navItems = [
-//     { name: 'Home', href: '#home' },
-//     { name: 'Tokenomics', href: '#tokenomics' },
-//     { name: 'Reflections', href: '#reflections' },
-//     { name: 'Community', href: '#community' },
-//     { name: 'Roadmap', href: '#roadmap' },
-//     { name: 'Whitepaper', href: '#whitepaper' },
-//   ];
-
-//   // Effect to handle continuous scrolling
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setPartners(prevPartners => {
-//         const firstPartner = prevPartners[0];
-//         return [...prevPartners.slice(1), firstPartner];
-//       });
-//     }, 3000);
-    
-//     return () => clearInterval(interval);
-//   }, []);
-
-//   return (
-//     <div className="flex flex-col w-full h-screen bg-black text-white overflow-y-auto relative">
-      
-//       {/* Header */}
-//       <header className="flex justify-between items-center p-6 z-20 mt-4">
-//         <div className="flex items-center">
-//           <div className="h-6 w-6 rounded-full mr-2"> <img src="rotatingcoin.png" alt="OURS coin" /></div>
-//           <span className="font-bold">$OURS</span>
-//         </div>
-//         <button className="text-white" onClick={() => setIsNavOpen(!isNavOpen)}>
-//           <div className="flex flex-col space-y-1">
-//             <div className="w-5 h-0.5 bg-white"></div>
-//             <div className="w-5 h-0.5 bg-white"></div>
-//             <div className="w-5 h-0.5 bg-white"></div>
-//           </div>
-//         </button>
-//       </header>
-
-      
-//       {/* Main Content */}
-//       <main className="flex-1 flex flex-col items-center px-4 pb-16 pt-16">
-//         {/* ... existing main content ... */}
-        
-//         {/* Your existing content goes here */}
-        
-//         {/* Footer Section based on screenshot */}
-       
-        
-//         {/* Scrolling Partners */}
-//         <div className="w-full mt-auto pt-4 overflow-hidden">
-//           <div className="flex space-x-4 px-4">
-//             {partners.map(partner => (
-//               <div 
-//                 key={partner.id} 
-//                 className="flex items-center justify-center w-12 h-12 rounded-full flex-shrink-0" 
-//                 style={{backgroundColor: partner.color}}
-//               >
-//                 {partner.name.charAt(0)}
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </main>
-
-//       <style jsx>{`
-//         @keyframes spin {
-//           from {
-//             transform: rotate(0deg);
-//           }
-//           to {
-//             transform: rotate(360deg);
-//           }
-//         }
-        
-//         .animate-spin-slow {
-//           animation: spin 10s linear infinite;
-//         }
-//       `}</style>
-//     </div>
-//   );
-// }
