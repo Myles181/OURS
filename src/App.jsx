@@ -190,7 +190,7 @@ export default function OursTokenApp() {
           </svg>
           View Chart
         </button>
-      
+
         {/* Rotating Coin */}
         <div className="animate-spin-slow w-72 h-72 rounded-full mb-8 flex items-center justify-center">
           <img src="rotatingcoin.png" alt="" />
@@ -201,18 +201,24 @@ export default function OursTokenApp() {
         <div className="flex items-center p-2 space-x-2 overflow-x-auto">
           <div className="flex items-center rounded-full px-3 py-1">
             <div className="h-6 w-6 rounded-full mr-2"><img src="pinksale.png" alt="" /></div>
+            <a href="https://www.pinksale.finance/" target="_blank" rel="noopener noreferrer">
             <span className="text-sm">Pinksale</span>
+          </a>
           </div>
           <div className="flex items-center rounded-full px-3 py-1">
             <div className="h-6 w-6 rounded-full mr-2"><img src="bit.png" alt="" /></div>
-            <span className="text-sm">Binmart</span>
+            <a href="https://www.dexview.com/" target="_blank" rel="noopener noreferrer">
+              <span className="text-sm">Binmart</span>
+            </a>
           </div>
           <div className="flex items-center rounded-full px-3 py-1">
             <div className="h-6 w-6 rounded-full mr-2"><img src="coingecko.png" alt="" /></div>
-            <span className="text-sm">Coinpecko</span>
+            <a href="https://www.coingecko.com/" target="_blank" rel="noopener noreferrer">
+              <span className="text-sm">Coingecko</span>
+            </a>
           </div>
         </div>
-     
+
         {/* Market Stats Cards */}
         <div className="w-full max-w-md mb-6" id="reflections">
           {/* First Card - Rounded */}
@@ -234,7 +240,6 @@ export default function OursTokenApp() {
           </div>
         </div>
 
-          
           <div className="bg-black rounded-2xl p-4 mb-4 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full z-0">
               {/* If you want a background image here, place it like the first card */}

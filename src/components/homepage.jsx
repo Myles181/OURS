@@ -166,7 +166,10 @@ export default function OursTokenApp() {
           <div className="flex items-center p-2 space-x-2 overflow-x-auto">
         <div className="flex items-center rounded-full px-3 py-1">
           <div className="h-6 w-6 rounded-full mr-2"><img src="pinksale.png" alt="" /></div>
-          <span className="text-sm">Pinksale</span>
+          <a href="https://elentis.app" target="_blank" rel="noopener noreferrer">
+            <span className="text-sm">Pinksale</span>
+          </a>
+
         </div>
         <div className="flex items-center rounded-full px-3 py-1">
           <div className="h-6 w-6 rounded-full mr-2"><img src="bit.png" alt="" /></div>
